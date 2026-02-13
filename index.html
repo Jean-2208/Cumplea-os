@@ -1,400 +1,400 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Feliz Cumpleaños 20 ❤️</title>
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Cumpleaños 20 ❤️</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    body {
-      overflow: hidden;
-      background: linear-gradient(135deg, #ffeef8 0%, #e8d5f2 50%, #d4bbf0 100%);
-      font-family: 'Dancing Script', cursive;
-      height: 100vh;
-      position: relative;
-    }
+        body {
+            overflow: hidden;
+            background: linear-gradient(135deg, #ffeef8 0%, #e8d5f2 50%, #d4bbf0 100%);
+            font-family: 'Dancing Script', cursive;
+            height: 100vh;
+            position: relative;
+        }
 
-    #audio-control {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      z-index: 1000;
-      background: rgba(255, 255, 255, 0.3);
-      border: none;
-      border-radius: 50%;
-      width: 50px;
-      height: 50px;
-      cursor: pointer;
-      font-size: 24px;
-      backdrop-filter: blur(10px);
-      transition: all 0.3s;
-    }
+        #audio-control {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.3);
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            font-size: 24px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s;
+        }
 
-    #audio-control:hover {
-      transform: scale(1.1);
-      background: rgba(255, 255, 255, 0.5);
-    }
+        #audio-control:hover {
+            transform: scale(1.1);
+            background: rgba(255, 255, 255, 0.5);
+        }
 
-    .balloon {
-      position: fixed;
-      width: 50px;
-      height: 70px;
-      border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
-      filter: drop-shadow(0 5px 15px rgba(0,0,0,0.2));
-      opacity: 0;
-      animation: float-and-form 4s ease-out forwards, sway 3s ease-in-out infinite 4s;
-      z-index: 20;
-    }
+        .balloon {
+            position: fixed;
+            width: 50px;
+            height: 70px;
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            filter: drop-shadow(0 5px 15px rgba(0,0,0,0.2));
+            opacity: 0;
+            animation: float-and-form 4s ease-out forwards, sway 3s ease-in-out infinite 4s;
+            z-index: 20;
+        }
 
-    .balloon::before {
-      content: '';
-      position: absolute;
-      bottom: -10px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 2px;
-      height: 60px;
-      background: rgba(0,0,0,0.2);
-    }
+        .balloon::before {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 60px;
+            background: rgba(0,0,0,0.2);
+        }
 
-    .balloon::after {
-      content: '▼';
-      position: absolute;
-      bottom: -15px;
-      left: 50%;
-      transform: translateX(-50%);
-      color: rgba(0,0,0,0.3);
-      font-size: 10px;
-    }
+        .balloon::after {
+            content: '▼';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: rgba(0,0,0,0.3);
+            font-size: 10px;
+        }
 
-    @keyframes float-and-form {
-      0% {
-        transform: translateY(150vh);
-        opacity: 0;
-      }
-      50% {
-        opacity: 1;
-      }
-      100% {
-        transform: translateY(0);
-        opacity: 1;
-      }
-    }
+        @keyframes float-and-form {
+            0% {
+                transform: translateY(150vh);
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
 
-    @keyframes sway {
-      0%, 100% { transform: translateX(0) rotate(-2deg); }
-      50% { transform: translateX(10px) rotate(2deg); }
-    }
+        @keyframes sway {
+            0%, 100% { transform: translateX(0) rotate(-2deg); }
+            50% { transform: translateX(10px) rotate(2deg); }
+        }
 
-    .photo-cascade {
-      position: fixed;
-      width: 150px;
-      height: 150px;
-      border-radius: 10px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.3);
-      border: 5px solid white;
-      object-fit: cover;
-      opacity: 0;
-      z-index: 1;
-    }
+        .photo-cascade {
+            position: fixed;
+            width: 150px;
+            height: 150px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+            border: 5px solid white;
+            object-fit: cover;
+            opacity: 0;
+            z-index: 1;
+        }
 
-    @keyframes cascade-fall {
-      0% {
-        transform: translateY(-200px) rotate(0deg);
-        opacity: 0;
-      }
-      10% {
-        opacity: 1;
-      }
-      90% {
-        opacity: 1;
-      }
-      100% {
-        transform: translateY(120vh) rotate(360deg);
-        opacity: 0;
-      }
-    }
+        @keyframes cascade-fall {
+            0% {
+                transform: translateY(-200px) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(120vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
 
 
 
-    .message {
-      position: fixed;
-      bottom: 50px;
-      left: 50%;
-      transform: translateX(-50%);
-      font-size: 48px;
-      font-weight: 700;
-      background: linear-gradient(135deg, #ffb3d9 0%, #c9a7eb 50%, #b19ce6 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      text-align: center;
-      opacity: 0;
-      animation: message-appear 2s ease-in 5s forwards;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-      z-index: 50;
-      padding: 0 20px;
-    }
+        .message {
+            position: fixed;
+            bottom: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 48px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #ffb3d9 0%, #c9a7eb 50%, #b19ce6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-align: center;
+            opacity: 0;
+            animation: message-appear 2s ease-in 5s forwards;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            z-index: 50;
+            padding: 0 20px;
+        }
 
-    .name-container {
-      position: fixed;
-      top: 15%;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      gap: 5px;
-      z-index: 100;
-      font-size: 72px;
-      font-weight: 700;
-    }
+        .name-container {
+            position: fixed;
+            top: 15%;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 5px;
+            z-index: 100;
+            font-size: 72px;
+            font-weight: 700;
+        }
 
-    .letter {
-      background: linear-gradient(135deg, #ffb3d9 0%, #c9a7eb 50%, #b19ce6 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      opacity: 0;
-      transform: translateY(-100px);
-      animation: letter-drop 0.6s ease-out forwards;
-    }
+        .letter {
+            background: linear-gradient(135deg, #ffb3d9 0%, #c9a7eb 50%, #b19ce6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            opacity: 0;
+            transform: translateY(-100px);
+            animation: letter-drop 0.6s ease-out forwards;
+        }
 
-    @keyframes letter-drop {
-      0% {
-        opacity: 0;
-        transform: translateY(-100px);
-      }
-      60% {
-        transform: translateY(10px);
-      }
-      80% {
-        transform: translateY(-5px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
+        @keyframes letter-drop {
+            0% {
+                opacity: 0;
+                transform: translateY(-100px);
+            }
+            60% {
+                transform: translateY(10px);
+            }
+            80% {
+                transform: translateY(-5px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-    @keyframes message-appear {
-      to { opacity: 1; }
-    }
+        @keyframes message-appear {
+            to { opacity: 1; }
+        }
 
-    .start-button {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-family: 'Dancing Script', cursive;
-      font-size: 32px;
-      padding: 20px 40px;
-      background: linear-gradient(135deg, #ffb3d9 0%, #c9a7eb 100%);
-      color: white;
-      border: none;
-      border-radius: 50px;
-      cursor: pointer;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-      transition: all 0.3s;
-      z-index: 1001;
-    }
+        .start-button {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'Dancing Script', cursive;
+            font-size: 32px;
+            padding: 20px 40px;
+            background: linear-gradient(135deg, #ffb3d9 0%, #c9a7eb 100%);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            transition: all 0.3s;
+            z-index: 1001;
+        }
 
-    .start-button:hover {
-      transform: translate(-50%, -50%) scale(1.1);
-      box-shadow: 0 15px 40px rgba(0,0,0,0.4);
-    }
+        .start-button:hover {
+            transform: translate(-50%, -50%) scale(1.1);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+        }
 
-    .start-button.hidden {
-      display: none;
-    }
-  </style>
+        .start-button.hidden {
+            display: none;
+        }
+    </style>
 </head>
 <body>
-<button id="start-btn" class="start-button">Comenzar ✨</button>
-<button id="audio-control" style="display: none;">🔊</button>
-<audio id="bg-music" loop>
-  <source src="musica.mp3" type="audio/mpeg">
-</audio>
+    <button id="start-btn" class="start-button">Comenzar ✨</button>
+    <button id="audio-control" style="display: none;">🔊</button>
+    <audio id="bg-music" loop>
+        <source src="musica.mp3" type="audio/mpeg">
+    </audio>
 
-<div id="name-container" class="name-container"></div>
-<div id="photos-container"></div>
-<div id="balloons-container"></div>
-<div class="message">¡Feliz Cumpleaños mi amor! 💕</div>
+    <div id="name-container" class="name-container"></div>
+    <div id="photos-container"></div>
+    <div id="balloons-container"></div>
+    <div class="message">¡Feliz Cumpleaños mi amor! 💕</div>
 
-<script>
-  const photos = [
-    'fotos/foto1.jpg',
-    'fotos/foto2.jpg',
-    'fotos/foto3.jpg',
-    'fotos/foto4.jpg',
-    'fotos/foto5.jpg',
-    'fotos/foto6.jpg',
-    'fotos/foto7.jpg',
-    'fotos/foto8.jpg',
-    'fotos/foto9.jpg',
-    'fotos/foto10.jpg',
-    'fotos/foto11.jpg',
-    'fotos/foto12.jpg',
-    'fotos/foto13.jpg',
-    'fotos/foto14.jpg',
-    'fotos/foto15.jpg',
-    'fotos/foto16.jpg',
-    'fotos/foto17.jpg',
-    'fotos/foto18.jpg',
-    'fotos/foto19.jpg',
-    'fotos/foto20.jpg',
-  ];
+    <script>
+        const photos = [
+            'Fotos/foto1.jpg',
+            'Fotos/foto2.jpg',
+            'Fotos/foto3.jpg',
+            'Fotos/foto4.jpg',
+            'Fotos/foto5.jpg',
+            'Fotos/foto6.jpg',
+            'Fotos/foto7.jpg',
+            'Fotos/foto8.jpg',
+            'Fotos/foto9.jpg',
+            'Fotos/foto10.jpg',
+            'Fotos/foto11.jpg',
+            'Fotos/foto12.jpg',
+            'Fotos/foto13.jpg',
+            'Fotos/foto14.jpg',
+            'Fotos/foto15.jpg',
+            'Fotos/foto16.jpg',
+            'Fotos/foto17.jpg',
+            'Fotos/foto18.jpg',
+            'Fotos/foto19.jpg',
+            'Fotos/foto20.jpg',
+        ];
 
-  const balloonColors = [
-    '#ffb3d9', '#ffc9e5', '#e5b3ff', '#c9a7eb',
-    '#d4b3ff', '#ffcce0', '#f0b3ff', '#e8b3d9'
-  ];
+        const balloonColors = [
+            '#ffb3d9', '#ffc9e5', '#e5b3ff', '#c9a7eb', 
+            '#d4b3ff', '#ffcce0', '#f0b3ff', '#e8b3d9'
+        ];
 
-  // Posiciones para formar el número "2"
-  const positions2 = [
-    { left: '28%', top: '32%' },  // Parte superior izquierda
-    { left: '32%', top: '30%' },
-    { left: '36%', top: '29%' },
-    { left: '40%', top: '30%' },  // Parte superior derecha
-    { left: '42%', top: '34%' },
-    { left: '40%', top: '38%' },  // Curva media
-    { left: '36%', top: '41%' },
-    { left: '32%', top: '44%' },  // Diagonal
-    { left: '28%', top: '48%' },
-    { left: '32%', top: '52%' },  // Base
-    { left: '36%', top: '53%' },
-    { left: '40%', top: '52%' },
-  ];
+        // Posiciones para formar el número "2"
+        const positions2 = [
+            { left: '28%', top: '32%' },  // Parte superior izquierda
+            { left: '32%', top: '30%' },
+            { left: '36%', top: '29%' },
+            { left: '40%', top: '30%' },  // Parte superior derecha
+            { left: '42%', top: '34%' },
+            { left: '40%', top: '38%' },  // Curva media
+            { left: '36%', top: '41%' },
+            { left: '32%', top: '44%' },  // Diagonal
+            { left: '28%', top: '48%' },
+            { left: '32%', top: '52%' },  // Base
+            { left: '36%', top: '53%' },
+            { left: '40%', top: '52%' },
+        ];
 
-  // Posiciones para formar el número "0"
-  const positions0 = [
-    { left: '54%', top: '30%' },  // Parte superior
-    { left: '58%', top: '29%' },
-    { left: '62%', top: '30%' },
-    { left: '66%', top: '32%' },
-    { left: '52%', top: '34%' },  // Lado izquierdo
-    { left: '50%', top: '38%' },
-    { left: '50%', top: '43%' },
-    { left: '52%', top: '48%' },
-    { left: '68%', top: '36%' },  // Lado derecho
-    { left: '70%', top: '40%' },
-    { left: '70%', top: '45%' },
-    { left: '68%', top: '49%' },
-    { left: '54%', top: '52%' },  // Parte inferior
-    { left: '58%', top: '53%' },
-    { left: '62%', top: '52%' },
-    { left: '66%', top: '50%' },
-  ];
+        // Posiciones para formar el número "0"
+        const positions0 = [
+            { left: '54%', top: '30%' },  // Parte superior
+            { left: '58%', top: '29%' },
+            { left: '62%', top: '30%' },
+            { left: '66%', top: '32%' },
+            { left: '52%', top: '34%' },  // Lado izquierdo
+            { left: '50%', top: '38%' },
+            { left: '50%', top: '43%' },
+            { left: '52%', top: '48%' },
+            { left: '68%', top: '36%' },  // Lado derecho
+            { left: '70%', top: '40%' },
+            { left: '70%', top: '45%' },
+            { left: '68%', top: '49%' },
+            { left: '54%', top: '52%' },  // Parte inferior
+            { left: '58%', top: '53%' },
+            { left: '62%', top: '52%' },
+            { left: '66%', top: '50%' },
+        ];
 
-  let musicPlaying = false;
-  const audio = document.getElementById('bg-music');
-  const audioControl = document.getElementById('audio-control');
-  const startBtn = document.getElementById('start-btn');
+        let musicPlaying = false;
+        const audio = document.getElementById('bg-music');
+        const audioControl = document.getElementById('audio-control');
+        const startBtn = document.getElementById('start-btn');
 
-  startBtn.addEventListener('click', () => {
-    startBtn.classList.add('hidden');
-    audioControl.style.display = 'block';
-    audio.play();
-    musicPlaying = true;
-    startAnimation();
-  });
+        startBtn.addEventListener('click', () => {
+            startBtn.classList.add('hidden');
+            audioControl.style.display = 'block';
+            audio.play();
+            musicPlaying = true;
+            startAnimation();
+        });
 
-  audioControl.addEventListener('click', () => {
-    if (musicPlaying) {
-      audio.pause();
-      audioControl.textContent = '🔇';
-      musicPlaying = false;
-    } else {
-      audio.play();
-      audioControl.textContent = '🔊';
-      musicPlaying = true;
-    }
-  });
+        audioControl.addEventListener('click', () => {
+            if (musicPlaying) {
+                audio.pause();
+                audioControl.textContent = '🔇';
+                musicPlaying = false;
+            } else {
+                audio.play();
+                audioControl.textContent = '🔊';
+                musicPlaying = true;
+            }
+        });
 
-  function createBalloon(position, delay, color) {
-    const balloon = document.createElement('div');
-    balloon.className = 'balloon';
-    balloon.style.left = position.left;
-    balloon.style.top = position.top;
-    balloon.style.backgroundColor = color;
-    balloon.style.animationDelay = delay + 's';
-    document.getElementById('balloons-container').appendChild(balloon);
-  }
+        function createBalloon(position, delay, color) {
+            const balloon = document.createElement('div');
+            balloon.className = 'balloon';
+            balloon.style.left = position.left;
+            balloon.style.top = position.top;
+            balloon.style.backgroundColor = color;
+            balloon.style.animationDelay = delay + 's';
+            document.getElementById('balloons-container').appendChild(balloon);
+        }
 
-  function createCascadePhoto(photo, delay) {
-    const img = document.createElement('img');
-    img.className = 'photo-cascade';
-    img.src = photo;
-    img.style.left = Math.random() * 85 + '%';
-    img.style.animation = `cascade-fall ${8 + Math.random() * 4}s linear ${delay}s`;
+        function createCascadePhoto(photo, delay) {
+            const img = document.createElement('img');
+            img.className = 'photo-cascade';
+            img.src = photo;
+            img.style.left = Math.random() * 85 + '%';
+            img.style.animation = `cascade-fall ${8 + Math.random() * 4}s linear ${delay}s`;
+            
+            document.getElementById('photos-container').appendChild(img);
+            
+            setTimeout(() => {
+                img.remove();
+            }, (12 + delay) * 1000);
+        }
 
-    document.getElementById('photos-container').appendChild(img);
+        function startAnimation() {
+            // Primero mostrar el nombre letra por letra
+            const name = "Stephanie";
+            const nameContainer = document.getElementById('name-container');
+            
+            name.split('').forEach((letter, index) => {
+                const span = document.createElement('span');
+                span.className = 'letter';
+                span.textContent = letter;
+                span.style.animationDelay = (index * 0.15) + 's';
+                nameContainer.appendChild(span);
+            });
 
-    setTimeout(() => {
-      img.remove();
-    }, (12 + delay) * 1000);
-  }
+            // Después de que aparezca el nombre, crear los globos
+            setTimeout(() => {
+                // Crear globos para formar el "2"
+                positions2.forEach((pos, i) => {
+                    const delay = i * 0.12;
+                    const color = balloonColors[i % balloonColors.length];
+                    createBalloon(pos, delay, color);
+                });
 
-  function startAnimation() {
-    // Primero mostrar el nombre letra por letra
-    const name = "Stephanie";
-    const nameContainer = document.getElementById('name-container');
+                // Crear globos para formar el "0"
+                positions0.forEach((pos, i) => {
+                    const delay = i * 0.12 + 0.3;
+                    const color = balloonColors[i % balloonColors.length];
+                    createBalloon(pos, delay, color);
+                });
 
-    name.split('').forEach((letter, index) => {
-      const span = document.createElement('span');
-      span.className = 'letter';
-      span.textContent = letter;
-      span.style.animationDelay = (index * 0.15) + 's';
-      nameContainer.appendChild(span);
-    });
+                // Iniciar cascada de fotos después de que se formen los números
+                setTimeout(() => {
+                    startPhotoCascade();
+                }, 5000);
+            }, 2000); // Esperar 2 segundos después del nombre
+        }
 
-    // Después de que aparezca el nombre, crear los globos
-    setTimeout(() => {
-      // Crear globos para formar el "2"
-      positions2.forEach((pos, i) => {
-        const delay = i * 0.12;
-        const color = balloonColors[i % balloonColors.length];
-        createBalloon(pos, delay, color);
-      });
-
-      // Crear globos para formar el "0"
-      positions0.forEach((pos, i) => {
-        const delay = i * 0.12 + 0.3;
-        const color = balloonColors[i % balloonColors.length];
-        createBalloon(pos, delay, color);
-      });
-
-      // Iniciar cascada de fotos después de que se formen los números
-      setTimeout(() => {
-        startPhotoCascade();
-      }, 5000);
-    }, 2000); // Esperar 2 segundos después del nombre
-  }
-
-  function startPhotoCascade() {
-    let photoIndex = 0;
-
-    function dropPhoto() {
-      if (photoIndex < photos.length * 2) { // Repetir las fotos
-        const photo = photos[photoIndex % photos.length];
-        createCascadePhoto(photo, 0);
-        photoIndex++;
-        setTimeout(dropPhoto, 800); // Nueva foto cada 0.8 segundos
-      } else {
-        // Reiniciar cascada
-        setTimeout(() => {
-          photoIndex = 0;
-          dropPhoto();
-        }, 3000);
-      }
-    }
-
-    dropPhoto();
-  }
-</script>
+        function startPhotoCascade() {
+            let photoIndex = 0;
+            
+            function dropPhoto() {
+                if (photoIndex < photos.length * 2) { // Repetir las fotos
+                    const photo = photos[photoIndex % photos.length];
+                    createCascadePhoto(photo, 0);
+                    photoIndex++;
+                    setTimeout(dropPhoto, 800); // Nueva foto cada 0.8 segundos
+                } else {
+                    // Reiniciar cascada
+                    setTimeout(() => {
+                        photoIndex = 0;
+                        dropPhoto();
+                    }, 3000);
+                }
+            }
+            
+            dropPhoto();
+        }
+    </script>
 </body>
 </html>
